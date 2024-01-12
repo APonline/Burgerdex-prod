@@ -1,5 +1,0 @@
-<?php
-
-\Fr\LS::logout();
-
-?>
