@@ -61,11 +61,11 @@ if($GLOBALS['active']=="login"||$GLOBALS['active']=="account"){
 
 	\Fr\LS::config(array(
 	  "db" => array(
-	    "host" => "mysql.andrewphillips.online",
+	    "host" => $_ENV['HOST'],
 	    "port" => 3306,
-	    "username" => "apanemia",
-	    "password" => "milkmilk1",
-	    "name" => "burgerdex",
+	    "username" => $_ENV['USER'],
+	    "password" => $_ENV['PASS'],
+	    "name" => $_ENV['DB'],
 	    "table" => "users"
 	  ),
 	  "features" => array(

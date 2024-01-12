@@ -38,7 +38,7 @@ class LS
       /**
        * MySQL options
        */
-      "host" => "mysql.andrewphillips.online",
+      "host" => $_ENV['HOST'],
       "port" => 3306,
 
       /**
@@ -46,10 +46,10 @@ class LS
        */
       "sqlite_path" => "",
 
-      "username" => "apanemia",
-      "password" => "milkmilk1",
+      "username" => $_ENV['USER'],
+      "password" => $_ENV['PASS'],
 
-      "name" => "burgerdex",
+      "name" => $_ENV['DB'],
       "table" => "users",
       "token_table" => "resetTokens"
     ),

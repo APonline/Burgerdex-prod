@@ -7,8 +7,8 @@ class DatabaseConnection
 
     function connectDB(){
         try {
-
-            $this->conn = new PDO("mysql:host=oppenheim.iad1-mysql-e2-17a.dreamhost.com;dbname=burgerdex", "apanemia", "milkmilk1");
+            
+            $this->conn = new PDO("mysql:host=".$_ENV['HOST'].";dbname=".$_ENV['DB']."", $_ENV['USER'], $_ENV['PASS']);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         }catch (PDOException $e){
